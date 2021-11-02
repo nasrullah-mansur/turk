@@ -21,6 +21,21 @@ $(document).ready(function() {
 
     $('.header .mobile-btn').on('click', function() {
         $('.header .account-btn').toggleClass('active');
+    });
+
+    let backToTopBtn = $('.back-to-top');
+    $(window).on('scroll', function() {
+        let scrollFromTop = $(this).scrollTop();
+        if(scrollFromTop > 300) {
+            backToTopBtn.addClass('active');
+        } else {
+            backToTopBtn.removeClass('active');
+        }
+    });
+    backToTopBtn.on('click', function() {
+        $('html, body').animate({
+            scrollTop: 0,
+        });
     })
 
 

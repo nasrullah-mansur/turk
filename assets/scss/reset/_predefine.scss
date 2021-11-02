@@ -181,6 +181,34 @@ ul{
     }
 }
 
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #D14335;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: pointer;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+
+    i {
+        font-size: 22px;
+        color: $white;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
 // RTL;
 .rtl {
     text-align: right;
@@ -194,5 +222,9 @@ ul{
         flex-direction: row-reverse;
     }
 
-    
+    .back-to-top {
+        right: auto;
+        left: 15px;
+    }
 }
+

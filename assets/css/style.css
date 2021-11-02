@@ -193,6 +193,42 @@ ul {
   text-decoration: underline;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: #D14335;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.back-to-top i {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .rtl {
   text-align: right;
 }
@@ -210,6 +246,11 @@ ul {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.rtl .back-to-top {
+  right: auto;
+  left: 15px;
 }
 
 .header {
@@ -287,6 +328,8 @@ ul {
   font-weight: 600;
   color: #ffffff;
   border: 1px solid;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .header .btns a span {
@@ -298,13 +341,28 @@ ul {
   border-radius: 24px;
 }
 
+.header .btns a.custom-flag-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .header .btns a.custom-btn-border {
   border-color: #ffffff;
+}
+
+.header .btns a.custom-btn-border:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .header .btns a.custom-btn-bg {
   border-color: transparent;
   background-color: #D14335;
+}
+
+.header .btns a.custom-btn-bg:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 @media (max-width: 767.98px) {
@@ -989,75 +1047,6 @@ ul {
           flex-direction: row-reverse;
 }
 
-.services {
-  padding-top: 60px;
-  padding-bottom: 30px;
-  background-color: #F7F7F7;
-}
-
-.services .section-padding {
-  height: 60px;
-}
-
-@media (max-width: 991.98px) {
-  .services .section-padding {
-    height: 90px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .services .section-padding {
-    height: 300px;
-  }
-}
-
-.services .service-item {
-  margin-bottom: 20px;
-}
-
-.services .service-item .img {
-  position: relative;
-  overflow: hidden;
-}
-
-.services .service-item .img img {
-  width: 100%;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.services .service-item .img .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  z-index: 9;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.services .service-item .img .overlay .content {
-  padding: 15px 20px;
-  width: 100%;
-}
-
-.services .service-item .img .overlay .content h4 {
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #ffffff;
-}
-
-.services .service-item:hover .img img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .how-work {
   padding: 50px 0 30px;
   background-color: rgba(209, 66, 53, 0.04);
@@ -1202,6 +1191,75 @@ ul {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.services {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background-color: #F7F7F7;
+}
+
+.services .section-padding {
+  height: 60px;
+}
+
+@media (max-width: 991.98px) {
+  .services .section-padding {
+    height: 90px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services .section-padding {
+    height: 300px;
+  }
+}
+
+.services .service-item {
+  margin-bottom: 20px;
+}
+
+.services .service-item .img {
+  position: relative;
+  overflow: hidden;
+}
+
+.services .service-item .img img {
+  width: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.services .service-item .img .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.services .service-item .img .overlay .content {
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.services .service-item .img .overlay .content h4 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.services .service-item:hover .img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .define {

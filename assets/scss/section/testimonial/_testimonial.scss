@@ -1,0 +1,97 @@
+// Testimonial;
+.testimonial {
+    padding: 90px 0 130px;
+    background: $bgOne;
+
+    .title {
+        i {
+            font-size: 60px;
+            color: rgba(0, 0, 0, 0.24);
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 48px;
+            padding-top: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 300;
+        }
+    }
+
+    .slider {
+
+        @media (max-width: 991.98px) {
+            width: 536px;
+            max-width: 100%;
+            margin: 43px auto 0;
+        }
+
+        .item {
+            padding: 20px 30px;
+            background-color: $white;
+
+            p {
+                font-size: 20px;
+                line-height: 40px;
+                color: #555770;
+                margin-bottom: 20px;
+            }
+
+            .author {
+                display: flex;
+                align-items: center;
+
+                .text {
+                    padding-left: 18px;
+
+                    h4 {
+                        font-size: 16px;
+                        line-height: 26px;
+                        margin: 0;
+                        color: #555770;
+                    }
+
+                    .ratings {
+                        display: flex;
+
+                        i {
+                            color: $yellow;
+                            padding-right: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            position: absolute;
+            left: 50%;
+            bottom: -30px;
+            z-index: 99;
+            transform: translateX(-50%);
+            display: flex;
+
+            li {
+                width: 12px;
+                height: 12px;
+                margin: 0 4px;
+                border-radius: 50%;
+                background-color: #8F90A6;
+                opacity: .09;
+                cursor: pointer;
+
+                button {
+                    display: none;
+                }
+
+                &.slick-active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
