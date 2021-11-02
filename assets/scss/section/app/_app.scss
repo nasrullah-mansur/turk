@@ -1,6 +1,17 @@
 .app {
     padding-top: 100px;
 
+    @media (max-width: 991.98px) {
+        [class^="col"]:last-child {
+            padding-bottom: 90px;
+            order: -1;
+        }
+
+        .img {
+            text-align: center;
+        }
+    }
+
     .text {
         h2 {
             font-size: 32px;

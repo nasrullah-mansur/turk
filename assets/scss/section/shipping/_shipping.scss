@@ -7,6 +7,14 @@
         position: relative;
         z-index: 99;
 
+        @media (max-width: 991.98px) {
+            margin-top: -178px;
+        }
+
+        @media (max-width: 767.98px) {
+            margin-top: -112px;
+        }
+
         h2 {
             font-size: 24px;
             color: $white;
@@ -14,18 +22,20 @@
         }
 
         .form-content {
-            padding: 23px 16px;
+            padding: 23px 16px 13px;
             margin: 0 -10px;
             background-color: $white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-end;
 
             .input-area {
-                margin: 0 10px;
+                padding: 0 10px;
+                margin-bottom: 15px;
 
-                &:first-child,
+                &:nth-child(1),
                 &:nth-child(2) {
                     width: 25%;
                 }
@@ -36,6 +46,24 @@
 
                 &:nth-child(4) {
                     width: 15%;
+                }
+
+                @media (max-width: 991.99px) {
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        width: 50%;
+                    }
+                }
+
+                @media (max-width: 767.99px) {
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        width: 100%;
+                    }
                 }
 
                 h4 {
@@ -98,21 +126,31 @@
                         height: 45px;
                         border-radius: 0;
                         line-height: 45px;
+                        background-color: transparent;
+                        z-index: 1;
+
+                        &::after {
+                            right: 30px;
+                            border-left: 4px solid transparent;
+                            border-right: 4px solid transparent;
+                            border-top: 5px solid #8E8E93;
+                            border-bottom: 0;
+                            transform: rotate(0);
+                        }
                     }
 
-                    i {
-                        display: inline-block;
+                    &::after {
+                        content: '';
                         position: absolute;
                         bottom: 0;
                         right: 0;
                         width: 75px;
                         height: 45px;
-                        text-align: center;
-                        line-height: 45px;
                         background-color: #E5E5EA;
-                        color: #8E8E93;
-                        z-index: 99;
+                        z-index: 0;
                     }
+
+                    
                 }
 
                 button {

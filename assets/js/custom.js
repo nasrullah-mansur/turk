@@ -14,9 +14,14 @@ $(document).ready(function() {
         slideToShow: 1,
         dots: true,
         arrows: false,
+        autoplay: true,
     });
 
     $('.shipping select').niceSelect();
+
+    $('.header .mobile-btn').on('click', function() {
+        $('.header .account-btn').toggleClass('active');
+    })
 
 
 });

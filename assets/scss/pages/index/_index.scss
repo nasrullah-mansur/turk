@@ -1,7 +1,20 @@
+// Service;
 .services {
-    padding-top: 120px;
+    padding-top: 60px;
     padding-bottom: 30px;
     background-color: $bgOne;
+
+    .section-padding {
+        height: 60px;
+
+        @media (max-width: 991.98px) {
+            height: 90px;
+        }
+
+        @media (max-width: 767.98px) {
+            height: 300px;
+        }
+    }
 
     .service-item {
         margin-bottom: 20px;
@@ -48,22 +61,73 @@
     }
 }
 
+// How it work;
 .how-work {
     padding: 50px 0 30px;
     background-color: $bgTwo;
 
+    [class^="col"]:nth-child(2n) {
+        .item {
+            justify-content: flex-end;
+        }
+    }
+
     .content {
         position: relative;
 
-        .center-style {
-            position: absolute; 
+        .center-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 27px;
+            height: 70%;
+            z-index: -1;
+        
+            &.screen-md,
+            &.screen-sm {
+                display: none;
+            }
 
-            &.work-bg {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                top: 27px;
-                height: 70%;
+            @media (max-width: 1199.98px) {
+                max-width: 170px;
+                left: 52%;
+            }
+
+            @media (max-width: 991.98px) {
+                &.screen-bg {
+                    display: none;
+                }
+                
+                &.screen-md {
+                    display: block;
+                    max-width: 500px;
+                    left: 52%;
+                    height: 78%;
+                    top: 60px;
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                &.screen-bg,
+                &.screen-md {
+                    display: none;
+                }
+                
+                &.screen-sm {
+                    display: block;
+                    max-width: 400px;
+                    left: 50%;
+                    height: 71%;
+                    top: 135px;
+                }
+            }
+
+            @media (max-width: 460.98px) {
+               
+                &.screen-sm {
+                    width: 100%;
+                    left: 50%;
+                }
             }
         }
 
@@ -72,9 +136,6 @@
             display: flex;
             align-items: center;
 
-            &.right {
-                justify-content: flex-end;
-            }
 
             .img {
                 width: 165px;
@@ -92,6 +153,10 @@
                     font-size: 12px;
                     line-height: 24px;
                     color: #8E8E93;
+
+                    @media (max-width: 575px) {
+                        padding-right: 20px;
+                    }
                 }
             }
         }
@@ -118,6 +183,10 @@
             top: 50%;
             transform: translateY(-50%);
             width: 50%;
+
+            @media (max-width: 991.98px) {
+                display: none;
+            }
         }
 
         .item {
@@ -164,6 +233,13 @@
     }
 
     .slider {
+
+        @media (max-width: 991.98px) {
+            width: 536px;
+            max-width: 100%;
+            margin: 43px auto 0;
+        }
+
         .item {
             padding: 20px 30px;
             background-color: $white;
@@ -234,12 +310,18 @@
 // Map;
 .map {
     .img {
-        height: 437px;
+        min-height: 437px;
         position: relative;
+        overflow: hidden;
+
+        @media (max-width: 991.98px) {
+            height: 458px;
+        }
 
         img {
             height: 100%;
-            width: auto;
+            max-width: none !important;
+            min-width: 100%;
             position: absolute;
             top: 0;
             left: 0;
