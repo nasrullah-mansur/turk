@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55">
+  <defs>
+    <clipPath id="clip-path"/>
+  </defs>
+  <g id="Group_11488" data-name="Group 11488" transform="translate(-139 -1654)">
+    <rect id="Rectangle_5107" data-name="Rectangle 5107" width="55" height="55" rx="27.5" transform="translate(139 1654)" fill="#ff5c5c" opacity="0.08"/>
+    <g id="Mask_Group_50" data-name="Mask Group 50" clip-path="url(#clip-path)">
+      <g id="rocket-launch-duotone" transform="translate(153 1668)">
+        <rect id="Rectangle_5098" data-name="Rectangle 5098" width="28" height="28" fill="none"/>
+        <path id="Path_9407" data-name="Path 9407" d="M10.288,20.187C9.05,23.9,4.1,23.9,4.1,23.9s0-4.95,3.712-6.187Z" fill="#ff5c5c" opacity="0.2"/>
+        <path id="Path_9408" data-name="Path 9408" d="M20.187,12.763v7.062a.875.875,0,0,1-.256.619l-3.537,3.537a.875.875,0,0,1-1.477-.447L14,18.95Z" fill="#ff5c5c" opacity="0.2"/>
+        <path id="Path_9409" data-name="Path 9409" d="M15.237,7.813H8.175a.875.875,0,0,0-.619.256L4.019,11.606a.875.875,0,0,0,.447,1.477L9.05,14Z" fill="#ff5c5c" opacity="0.2"/>
+        <path id="Path_9410" data-name="Path 9410" d="M10.288,20.187C9.05,23.9,4.1,23.9,4.1,23.9s0-4.95,3.712-6.187" fill="none" stroke="#ff5c5c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+        <path id="Path_9411" data-name="Path 9411" d="M21.425,11.525,14,18.95,9.05,14l7.425-7.425A7.928,7.928,0,0,1,23.3,3.97a.871.871,0,0,1,.733.733A7.928,7.928,0,0,1,21.425,11.525Z" fill="none" stroke="#ff5c5c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+        <path id="Path_9412" data-name="Path 9412" d="M20.187,12.763v7.062a.875.875,0,0,1-.256.619l-3.537,3.537a.875.875,0,0,1-1.477-.447L14,18.95" fill="none" stroke="#ff5c5c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+        <path id="Path_9413" data-name="Path 9413" d="M15.237,7.813H8.175a.875.875,0,0,0-.619.256L4.019,11.606a.875.875,0,0,0,.447,1.477L9.05,14" fill="none" stroke="#ff5c5c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+      </g>
+    </g>
+  </g>
+</svg>

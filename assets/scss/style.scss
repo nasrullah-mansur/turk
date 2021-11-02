@@ -1,0 +1,28 @@
+ 
+// Variable
+@import "variable/_variable.scss";
+
+// Mixin
+@import "mixin/_mixin.scss";
+
+// Body reset content
+@import "reset/_predefine.scss";
+
+// Sections;
+    // English;
+    @import "section/english/header/header";
+    @import "section/english/footer/footer";
+    @import "section/english/banner/banner";
+    @import "section/english/shipping/shipping";
+    @import "section/english/app/app";
+
+    // Arabic;
+    @import "section/arabic/header/header";
+    @import "section/arabic/footer/footer";
+
+// Pages;
+    // English;
+    @import "pages/english/index/index";
+
+    // Arabic;
+    @import "pages/arabic/index/index";

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_5101" data-name="Rectangle 5101" width="28" height="28" transform="translate(429 1668)" fill="#5b8def"/>
+    </clipPath>
+  </defs>
+  <g id="Group_11486" data-name="Group 11486" transform="translate(-415 -1654)">
+    <rect id="Rectangle_5108" data-name="Rectangle 5108" width="55" height="55" rx="27.5" transform="translate(415 1654)" fill="#5b8def" opacity="0.08"/>
+    <g id="Mask_Group_52" data-name="Mask Group 52" clip-path="url(#clip-path)">
+      <g id="money-duotone" transform="translate(429 1668)">
+        <rect id="Rectangle_5103" data-name="Rectangle 5103" width="28" height="28" fill="none"/>
+        <g id="Group_10705" data-name="Group 10705" opacity="0.2">
+          <circle id="Ellipse_234" data-name="Ellipse 234" cx="3.5" cy="3.5" r="3.5" transform="translate(10.5 10.5)" fill="#5b8def"/>
+          <path id="Path_9417" data-name="Path 9417" d="M25.375,7H19.25l7,6.125V7.875A.875.875,0,0,0,25.375,7Z" fill="#5b8def"/>
+          <path id="Path_9418" data-name="Path 9418" d="M25.375,21a.875.875,0,0,0,.875-.875v-5.25L19.25,21Z" fill="#5b8def"/>
+          <path id="Path_9419" data-name="Path 9419" d="M1.75,7.875v5.25L8.75,7H2.625a.875.875,0,0,0-.875.875Z" fill="#5b8def"/>
+          <path id="Path_9420" data-name="Path 9420" d="M1.75,20.125A.875.875,0,0,0,2.625,21H8.75l-7-6.125Z" fill="#5b8def"/>
+        </g>
+        <rect id="Rectangle_5104" data-name="Rectangle 5104" width="24.5" height="14" rx="0.875" transform="translate(1.75 7)" fill="none" stroke="#5b8def" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+        <circle id="Ellipse_235" data-name="Ellipse 235" cx="3.5" cy="3.5" r="3.5" transform="translate(10.5 10.5)" fill="none" stroke="#5b8def" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+        <line id="Line_810" data-name="Line 810" x2="7" y2="6.125" transform="translate(19.25 7)" fill="none" stroke="#5b8def" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+        <line id="Line_811" data-name="Line 811" y1="6.125" x2="7" transform="translate(19.25 14.875)" fill="none" stroke="#5b8def" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+        <line id="Line_812" data-name="Line 812" x1="7" y2="6.125" transform="translate(1.75 7)" fill="none" stroke="#5b8def" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+        <line id="Line_813" data-name="Line 813" x1="7" y1="6.125" transform="translate(1.75 14.875)" fill="none" stroke="#5b8def" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+      </g>
+    </g>
+  </g>
+</svg>
