@@ -229,3 +229,20 @@
         }
     }
 }
+
+
+// Map;
+.map {
+    .img {
+        height: 437px;
+        position: relative;
+
+        img {
+            height: 100%;
+            width: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
