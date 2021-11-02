@@ -180,3 +180,19 @@ ul{
         text-decoration: underline;
     }
 }
+
+// RTL;
+.rtl {
+    text-align: right;
+
+    .row {
+        flex-direction: row-reverse;
+    }
+
+    .section-title {
+        text-align: right;
+        flex-direction: row-reverse;
+    }
+
+    
+}

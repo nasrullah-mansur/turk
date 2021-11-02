@@ -146,3 +146,24 @@
         }
     }
 }
+
+.rtl {
+    .footer {
+        .content {
+            flex-direction: row-reverse;
+
+            .footer-item {
+                &.payment,
+                &.logo {
+                    ul {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            flex-direction: row-reverse;
+        }
+    }
+}

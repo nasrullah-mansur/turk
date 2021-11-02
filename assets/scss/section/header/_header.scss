@@ -102,3 +102,22 @@
         }
     }
 }
+
+.rtl {
+    .header-content {
+        flex-direction: row-reverse;
+    }
+
+    .btns {
+        flex-direction: row-reverse;
+
+        a {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+    }
+
+    .account-btn {
+        flex-direction: row-reverse;
+    }
+}

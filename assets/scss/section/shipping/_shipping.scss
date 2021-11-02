@@ -162,3 +162,74 @@
     }
 
 }
+
+// RTL;
+.rtl {
+    text-align: right;
+
+    .form {
+        .form-content {
+            flex-direction: row-reverse;
+
+            .input-area {
+                input,
+                select {
+                    text-align: right;
+                }
+
+                .input {
+                    position: relative;
+
+                    input {
+                        padding: 0 45px 0 15px;
+                    }
+
+                    i {
+                        left: auto;
+                        right: 15px;
+                    }
+                }
+
+                &:nth-child(1) {
+                    .input {
+                        i {
+                            transform: rotate(135deg);
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .input {
+                        i {
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+
+                .select {
+                    .nice-select {
+                        text-align: right !important;
+
+                        &::after {
+                            right: auto;
+                            left: 30px;
+                        }
+
+                        ul {
+                            li {
+                                text-align: right;
+                            }
+                        }
+                    }
+
+                    &::after {
+                        right: auto;
+                        left: 0;                        
+                    }
+
+                    
+                }
+            }
+        }
+
+    }
+}

@@ -40,6 +40,7 @@
 
                 .content {
                     padding: 15px 20px;
+                    width: 100%;
 
                     h4 {
                         font-size: 20px;
@@ -163,6 +164,51 @@
     }
 }
 
+.rtl {
+
+    .how-work {
+        .content .center-line {
+            transform: rotateY(180deg) translate(-50%);
+            left: auto;
+            right: 50%;
+
+            @media (max-width: 1199.98px) {
+                left: auto;
+                right: 52%;
+            }
+
+            @media (max-width: 991.98px) {
+                &.screen-md {
+                    left: auto;
+                    right: 52%;
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                &.screen-sm {
+                    left: auto;
+                    right: 50%;
+                }
+            }
+
+            @media (max-width: 460.98px) {
+               
+                &.screen-sm {
+                    left: auto;
+                    right: 50%;
+                }
+            }
+        }
+
+        .item {
+            flex-direction: row-reverse;
+        }
+    }
+
+
+
+}
+
 // Defines;
 .define {
     position: relative;
@@ -202,6 +248,18 @@
                 font-size: 14px;
                 line-height: 28px;
                 font-weight: 300;
+            }
+        }
+    }
+}
+
+.rtl {
+    .define {
+        .content {            
+            > img {
+                right: auto;
+                left: 0;
+                transform: translateY(-50%) rotateY(180deg);
             }
         }
     }

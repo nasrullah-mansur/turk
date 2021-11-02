@@ -33,3 +33,12 @@
         }
     }
 }
+
+.rtl {
+    .text {
+        .app-btn {
+            flex-direction: row-reverse;
+            
+        }
+    }
+}
