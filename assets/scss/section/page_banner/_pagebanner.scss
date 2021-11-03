@@ -1,0 +1,59 @@
+.page-banner {
+    height: 192px;
+    background-color: #D14335;
+    margin-top: 88px;
+    display: flex;
+    align-items: center;
+
+    .content {
+        width: 100%;
+
+        h1 {
+            font-size: 32px;
+            color: $white;
+        }
+
+        ul {
+            display: flex;
+            li {
+                display: flex;
+                align-items: center;
+                
+                i {
+                    display: block;
+                    padding: 0 10px;
+                    color: #FFC3BE;
+                    transform: rotate(0);
+                }
+
+                a {
+                    font-size: 16px;
+                    color: #FFC3BE;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rtl {
+    .page-banner {
+        .content {
+            ul {
+                flex-direction: row-reverse;
+
+                li {
+                    flex-direction: row-reverse;
+
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.categories-page {
+    .categories-area {
+        padding-top: 30px;
+        padding-bottom: 52px;
+        background-color: $bgOne;
+
+        [class^="col"] {
+            margin-bottom: 20px;
+        }
+
+        .item {
+            position: relative;
+            padding: 10px 20px;
+            height: 240px;
+            background-color: $white;
+            box-shadow: 7px 10px 30px rgba(0, 0, 0, 0.04);
+            
+            .img {
+                display: flex;
+                height: 186px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            img {
+                max-width: 100%;
+                padding-top: 10px;
+                transition: $transition;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+
+            .overlay {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+
+                h4 {
+                    padding: 10px 20px 30px;
+                    font-size: 16px;
+                    color: $black;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

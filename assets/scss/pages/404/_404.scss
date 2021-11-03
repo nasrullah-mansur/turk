@@ -1,0 +1,32 @@
+.page-404 {
+    background-color: $bgOne;
+    padding-top: 88px;
+
+    .page-content {
+        display: flex;
+        align-items: center;
+        min-height: calc(100vh - 88px);
+
+        .content {
+            width: 100%;
+            text-align: center;
+
+            h1 {
+                font-size: 24px;
+                padding-top: 30px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 600;
+                color: #8E8E93;
+                padding-top: 5px;
+            }
+
+            a {
+                margin-top: 10px;
+            }
+        }
+    }
+
+}

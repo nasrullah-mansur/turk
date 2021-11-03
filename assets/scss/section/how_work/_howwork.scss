@@ -11,6 +11,7 @@
 
     .content {
         position: relative;
+        z-index: 2;
 
         .center-line {
             position: absolute;
@@ -18,7 +19,7 @@
             transform: translateX(-50%);
             top: 27px;
             height: 70%;
-            z-index: -1;
+            z-index: 1;
         
             &.screen-md,
             &.screen-sm {
