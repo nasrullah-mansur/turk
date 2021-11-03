@@ -159,6 +159,17 @@
                 }
             }
         }
+
+        @media (max-width: 575px) {
+            h2 {
+                padding-left: 10px;
+            }
+            
+            .form-content {
+                padding: 23px 10px 13px;
+                margin: 0 10px;
+            }
+        }
     }
 
 }

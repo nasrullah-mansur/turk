@@ -15,6 +15,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+body.rtl {
+    font-family: $bodyFontAr;
+}
+
 h1,
 h2,
 h3,
@@ -23,6 +27,17 @@ h5,
 h6{
 	font-family: $titleFont;
 	font-weight: 600;
+}
+
+.rtl {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        font-family: $titleFontAr;
+    }
 }
 
 iframe {
@@ -206,6 +221,24 @@ ul{
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 575px) {
+    .pl-sm-30 {
+        padding-left: 30px;
+    }
+    
+    .px-sm-30 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .rtl {
+        .pl-sm-30 {
+            padding-left: auto;
+            padding-right: 30px;
+        }
     }
 }
 

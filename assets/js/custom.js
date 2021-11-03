@@ -38,5 +38,8 @@ $(document).ready(function() {
         });
     })
 
+    $('.custom-btn-bg > span').on('click', function() {
+        $('.custom-btn-bg .sub-menu').toggle();
+    })
 
 });
