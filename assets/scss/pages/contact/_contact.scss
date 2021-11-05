@@ -47,6 +47,12 @@
             &:last-child {
                 padding-bottom: 0;
             }
+
+            input:focus,
+            textarea:focus {
+                border-color: $primary-color;
+                caret-color: $primary-color;
+            }
         }
 
 

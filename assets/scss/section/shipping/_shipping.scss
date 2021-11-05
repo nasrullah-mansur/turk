@@ -117,40 +117,23 @@
                     }
                 }
 
-                .select {
-                    position: relative;
-                    height: 45px;
-
-                    .nice-select {
-                        border: 1px solid #E5E5EA;
-                        height: 45px;
-                        border-radius: 0;
-                        line-height: 45px;
-                        background-color: transparent;
-                        z-index: 1;
-
-                        &::after {
-                            right: 30px;
-                            border-left: 4px solid transparent;
-                            border-right: 4px solid transparent;
-                            border-top: 5px solid #8E8E93;
-                            border-bottom: 0;
-                            transform: rotate(0);
-                        }
-                    }
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                        width: 75px;
-                        height: 45px;
+                .input.select-location {
+                    i {
+                        width: 76px;
+                        height: 100%;
                         background-color: #E5E5EA;
-                        z-index: 0;
+                        top: 0;
+                        left: auto;
+                        right: 0;
+                        text-align: center;
+                        line-height: 46px;
+                        color: #8E8E93;
+                        cursor: pointer;
                     }
 
-                    
+                    input {
+                        padding-left: 10px;
+                    }
                 }
 
                 button {
@@ -216,31 +199,99 @@
                     }
                 }
 
-                .select {
-                    .nice-select {
-                        text-align: right !important;
+              
 
-                        &::after {
-                            right: auto;
-                            left: 30px;
-                        }
-
-                        ul {
-                            li {
-                                text-align: right;
-                            }
-                        }
-                    }
-
-                    &::after {
+                .input.select-location {
+                    i {
+                        left: 0;
                         right: auto;
-                        left: 0;                        
+                    }
+    
+                    input {
+                        padding-left: 0;
+                        padding-right: 10px;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+// Modal;
+.shipping-modal {
+
+    .modal-dialog {
+        @media (min-width: 576px) {
+            min-width: 568px;
+        }
+    }
+    .modal-content {
+        border-radius: 0;
+
+        .modal-body {
+            padding: 0;
+
+            h3 {
+                font-size: 24px;
+                padding: 25px 15px 15px;
+
+                @media (max-width: 767.98px) {
+                    font-size: 16px;
+                }
+            }
+
+            #choseLocation {
+                height: 500px;
+            }
+
+            .btn-area {
+                display: flex;
+                justify-content: flex-end;
+                padding: 20px 15px;
+
+                button {
+                    border: 0;
+                    width: 168px;
+                    height: 48px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-left: 15px;
+                    border: 1px solid transparent;
+
+                    &.select {
+                        background-color: $primary-color;
+                        color: $white;
                     }
 
+                    &.cancel {
+                        border-color: #E5E5EA;
+                        color: #A3A3A3;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.rtl {
+    .shipping-modal {
+
+        .modal-content {
+           
+    
+            .modal-body {
+               
+                .btn-area {
+                    flex-direction: row-reverse;
+    
                     
                 }
             }
         }
-
+    
     }
 }

@@ -19,12 +19,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="rtl">
-
-    <!-- Back to top start -->
-    <div class="back-to-top">
-        <i class="las la-arrow-up"></i>
-    </div>
-    <!-- Back to top end -->
     
     <!-- Header start -->
     <header class="header">
@@ -37,7 +31,7 @@
                 </div>
                 <div class="btns">
                     <a href="#" class="custom-flag-btn">
-                        <img src="assets/images/flug-arabic.png" alt="flag">
+                        <img src="assets/images/flug-arabic.svg" alt="flag">
                         <span>العربية</span>
                     </a>
                     <a href="javascript:void(0);" class="mobile-btn">
@@ -89,7 +83,7 @@
                         <div class="container">
                             <div class="col-lg-8 m-auto">
                                 <h3>
-                                    المكونات الرئيسية: السهولة والاتصال والكثير من الحب لتجربة شحن رائعة بلد المنتج: المملكة العربية السعودية
+                                    المكونات الرئيسية: السهولة والاتصال والكثير من الحب لتجربة شحن رائعة بلد المنتج:<br>  المملكة العربية السعودية
                                 </h3>
                             </div>
                         </div>
@@ -132,15 +126,13 @@
                             <input type="text" placeholder="الي…">
                         </div>
                     </div>
+
                     <div class="input-area">
                         <h4>ماذا ستنقل ؟</h4>
-                        <div class="select">
-                            <select class="wide">
-                                <option value="" disabled selected>اختر العنصر</option>
-                                <option value="1">Select one</option>
-                                <option value="2">Select two</option>
-                                <option value="2">Select three</option>
-                            </select>
+                        
+                        <div class="input select-location" data-bs-toggle="modal" data-bs-target="#mapModal">
+                            <i class="fas fa-sort-down"></i>
+                            <input type="text" readonly placeholder="اختر العنصر">
                         </div>
                     </div>
                     <div class="input-area submit">
@@ -448,11 +440,7 @@
 
     <!-- Map start -->
     <div class="map">
-        <div class="img">
-            <img class="map-lg d-none d-lg-block" src="assets/images/map.png" alt="map">
-            <img class="map-md d-none d-md-block d-lg-none" src="assets/images/map-2.png" alt="map">
-            <img class="map-sm d-md-none" src="assets/images/map-3.png" alt="map">
-        </div>
+        <div id="gmap"></div>
     </div>
     <!-- Map end -->
 
@@ -527,12 +515,139 @@
     </footer>
     <!-- Footer end -->
 
+    <!-- Map modal start -->
+    <div class="modal shipping-modal fade" id="mapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3>حدد عنوانك على الخريطة</h3>
+                <div class="map">
+                    <div id="choseLocation"></div>
+                </div>
+                <div class="btn-area">
+                    <button class="select" data-bs-dismiss="modal">تحديد</button>
+                    <button class="cancel" data-bs-dismiss="modal" >إلغاء</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Map modal end -->
+
 
     <!-- Scripts -->
+    <script>
+        function initMap() {
+            // Map options;
+            var options = {
+                zoom: 8,
+                center: {lat: 42.7921, lng: -71.0589}
+            }
+
+            // New map;
+            var choseLocation = new google.maps.Map(document.getElementById('choseLocation'), options);
+            var map = new google.maps.Map(document.getElementById('gmap'), options);
+            var iconAsset = 'assets/images/box.png';
+
+            // Array of marker;
+            var markers = [
+                {
+                    coords: {lat: 42.3601, lng: -71.0589},
+                    icon: iconAsset, 
+                    content: '<h6>This is title</h6>',
+                },
+                {
+                    coords: {lat: 42.8584, lng: -71.9300},
+                    icon: iconAsset, 
+                    content: '<h6>This is title two</h6>',
+                }
+            ]
+
+            for(var i = 0; i < markers.length; i++) {
+                addMarker(markers[i]);
+            }
+            function addMarker(props) {
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map,
+                });
+
+
+                if(props.icon) {
+                    // Set icon;
+                    marker.setIcon(props.icon);
+                }
+
+
+                // Set content;
+                if(props.content) {
+
+                var infoWindow = new google.maps.InfoWindow({
+                    content: props.content,
+                });
+            
+                // Event marker content;
+                marker.addListener('click', function() {
+                    infoWindow.open(map, marker);
+                })
+
+                }
+            }
+
+
+
+
+            // Location chose;
+            
+            var iconAsset = 'assets/images/icon-2.png';
+            var ChoseMarkers = [
+                {
+                    coords: {lat: 42.3601, lng: -71.0589},
+                    icon: iconAsset, 
+                }
+            ]
+
+            for(var i = 0; i < ChoseMarkers.length; i++) {
+                addMarkerChose(ChoseMarkers[i]);
+            }
+            function addMarkerChose(props) {
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: choseLocation,
+                });
+
+
+                if(props.icon) {
+                    // Set icon;
+                    marker.setIcon(props.icon);
+                }
+
+
+                // Set content;
+                if(props.content) {
+
+                var infoWindow = new google.maps.InfoWindow({
+                    content: props.content,
+                });
+            
+                // Event marker content;
+                marker.addListener('click', function() {
+                    infoWindow.open(choseLocation, marker);
+                })
+
+                }
+            }
+
+        }
+    
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4RM7zOgOKq6n2fv407hX28xiL-M6vLdY&callback=initMap&v=weekly" async ></script>
+    
     <script src="assets/js/jquery.2.2.4.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/custom.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,246 @@
+.shipping {
+    width: 100%;
+    position: absolute;
+    
+    .form {
+        margin-top: -115px;
+        position: relative;
+        z-index: 99;
+
+        @media (max-width: 991.98px) {
+            margin-top: -178px;
+        }
+
+        @media (max-width: 767.98px) {
+            margin-top: -112px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: $white;
+            padding-bottom: 20px;
+        }
+
+        .form-content {
+            padding: 23px 16px 13px;
+            margin: 0 -10px;
+            background-color: $white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .input-area {
+                padding: 0 10px;
+                margin-bottom: 15px;
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    width: 25%;
+                }
+
+                &:nth-child(3) {
+                    width: 35%;
+                }
+
+                &:nth-child(4) {
+                    width: 15%;
+                }
+
+                @media (max-width: 991.99px) {
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        width: 50%;
+                    }
+                }
+
+                @media (max-width: 767.99px) {
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        width: 100%;
+                    }
+                }
+
+                h4 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                }
+
+                input,
+                select,
+                button {
+                    width: 100%;
+                    height: 45px;
+                    border: 1px solid #E5E5EA;
+                    font-size: 14px;
+                    font-weight: 300;
+
+                    &::placeholder {
+                        color: #E5E5EA;
+                    }
+                }
+
+                .input {
+                    position: relative;
+
+                    input {
+                        padding: 0 15px 0 45px;
+                    }
+
+                    i {
+                        position: absolute;
+                        top: 15px;
+                        left: 15px;
+                        color: $primary-color;
+                        z-index: 99;
+                    }
+                }
+
+                &:nth-child(1) {
+                    .input {
+                        i {
+                            transform: rotate(-135deg);
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .input {
+                        i {
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+                .select {
+                    position: relative;
+                    height: 45px;
+
+                    .nice-select {
+                        border: 1px solid #E5E5EA;
+                        height: 45px;
+                        border-radius: 0;
+                        line-height: 45px;
+                        background-color: transparent;
+                        z-index: 1;
+
+                        &::after {
+                            right: 30px;
+                            border-left: 4px solid transparent;
+                            border-right: 4px solid transparent;
+                            border-top: 5px solid #8E8E93;
+                            border-bottom: 0;
+                            transform: rotate(0);
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 75px;
+                        height: 45px;
+                        background-color: #E5E5EA;
+                        z-index: 0;
+                    }
+
+                    
+                }
+
+                button {
+                    background-color: $primary-color;
+                    color: $white;
+                }
+            }
+        }
+
+        @media (max-width: 575px) {
+            h2 {
+                padding-left: 10px;
+            }
+            
+            .form-content {
+                padding: 23px 10px 13px;
+                margin: 0 10px;
+            }
+        }
+    }
+
+}
+
+// RTL;
+.rtl {
+    text-align: right;
+
+    .form {
+        .form-content {
+            flex-direction: row-reverse;
+
+            .input-area {
+                input,
+                select {
+                    text-align: right;
+                }
+
+                .input {
+                    position: relative;
+
+                    input {
+                        padding: 0 45px 0 15px;
+                    }
+
+                    i {
+                        left: auto;
+                        right: 15px;
+                    }
+                }
+
+                &:nth-child(1) {
+                    .input {
+                        i {
+                            transform: rotate(135deg);
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .input {
+                        i {
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+
+                .select {
+                    .nice-select {
+                        text-align: right !important;
+
+                        &::after {
+                            right: auto;
+                            left: 30px;
+                        }
+
+                        ul {
+                            li {
+                                text-align: right;
+                            }
+                        }
+                    }
+
+                    &::after {
+                        right: auto;
+                        left: 0;                        
+                    }
+
+                    
+                }
+            }
+        }
+
+    }
+}
